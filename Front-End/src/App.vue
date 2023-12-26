@@ -32,6 +32,12 @@ header{
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  
+  a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
 }
 footer{
   color: white;
