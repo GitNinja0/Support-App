@@ -7,11 +7,13 @@ let password = ref('')
 let store = useAuthStore();
 
 function login(){
-    console.log(store)
+    if(username.value = store.user.username){
+        console.log('hello')
+    }
 }
 </script>
 <template>
-    <div>
+    <section>
         <H2 class="login_h2">Inicio de Sesión</H2>
 
         <form @submit.prevent="login">
@@ -26,10 +28,10 @@ function login(){
 
             <button  type="submit">Login</button>
         </form>
-    </div>
+    </section>
 </template>
 <style lang="scss" scoped>
-div{
+section{
     display: grid;
     justify-items: center;
 }
@@ -60,6 +62,21 @@ form{
         width: 400px;
         height: 40px;
         border-radius: 20px;
+    }
+    @media (max-width: 968px) {
+        input{
+            width: 300px;
+        }    
+    }
+    @media (max-width: 668px) {
+        input{
+            width: 200px;
+        }    
+    }
+    @media (max-width: 468px) {
+        input{
+            width: 100px;
+        }    
     }
     button{
         outline: none;
