@@ -7,7 +7,7 @@ let password = ref('')
 let store = useAuthStore();
 
 function login(){
-    if(username.value = store.user.username){
+    if(username.value = store.user.username && password.value == store.user.password){
         console.log('hello')
     }
 }
