@@ -1,0 +1,1 @@
+INSERT INTO support (id_support, name) VALUES (default, 'hello');
