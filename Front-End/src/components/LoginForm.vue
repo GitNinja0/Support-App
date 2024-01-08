@@ -1,13 +1,18 @@
 <script setup>
 import { ref } from 'vue'; 
 import { useAuthStore } from '@/stores/auth'
+import { useRouter } from 'vue-router';
 
 let username = ref('')
 let password = ref('')
 let store = useAuthStore();
+let router = useRouter
+
 
 function login(){
     if(username.value = store.user.username && password.value == store.user.password){
+        // store.user.isAuthenticated = true;
+        // router.push('/request')
         console.log('hello')
     }
 }
@@ -17,11 +22,11 @@ function login(){
         <H2 class="login_h2">Inicio de Sesión</H2>
 
         <form @submit.prevent="login">
-            <label for="username">
+            <label for="">
                 <h4>Usuario</h4>
                 <input type="text" name="username" v-model="username">
             </label>
-            <label for="password">
+            <label for="">
                 <h4>Contraseña</h4>
                 <input type="password" name="password" v-model="password">            
             </label>
