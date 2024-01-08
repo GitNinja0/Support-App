@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue'; 
 import { useAuthStore } from '@/stores/auth'
-import { useRouter } from 'vue-router';
+// import { useRouter } from 'vue-router';
 
 let username = ref('')
 let password = ref('')
 let store = useAuthStore();
-let router = useRouter
+// let router = useRouter
 
 
 function login(){
